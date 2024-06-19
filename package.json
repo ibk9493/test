@@ -1,0 +1,29 @@
+{
+  "name": "callbackhell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify": "uglifyjs ./src/app.js -o ./dist/app.min.js --source-map \"url='app.min.js.map'\"",
+    "minify-all": "uglifyjs ./src/*.js -o ./dist/app.min.js --source-map \"url='app.min.js.map'\"",
+    "test": "jest",
+    "lint": "eslint .",
+    "deploy": "git push origin main",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.jsx": "eslint --fix",
+    "*.ts": "eslint --fix",
+    "*.tsx": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.7",
+    "uglify-js": "^3.18.0"
+  }
+}
